@@ -98,18 +98,7 @@ int main()
         
     }
     end_display();
-    /*for(i=0;i<n;i++)
-    {
-        process_list[i].taround_time=(process_list[i].ct)-(process_list[i].arrival_t);
-        avg_taround_time=avg_taround_time+process_list[i].taround_time;
-        process_list[i].waiting_t=((process_list[i].taround_time)-a[i]);
-        avg_w_t=avg_w_t+process_list[i].waiting_t;
-    }
-    printf("PNO\tAT\tCT\tTA\tWTt\n");
-    
-    for(i=0;i<n;i++)
-    {
-        printf("P%d\t%d\t%d\t%d\t%d\n",process_list[i].process_no,process_list[i].arrival_t,process_list[i].ct,process_list[i].taround_time,process_list[i].waiting_t);
+    /*\t%d\t%d\t%d\n",process_list[i].process_no,process_list[i].arrival_t,process_list[i].ct,process_list[i].taround_time,process_list[i].waiting_t);
     }
     
     printf("Average Turn around Time: %f\t\n\n",avg_taround_time);
