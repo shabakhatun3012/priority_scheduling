@@ -27,7 +27,7 @@ void Sorting()
 }
 void end_display()
 {
-	 int i,t=0,b_t=0,peak;
+	 int i,t=0,b_total=0,peak;
     int a[10];
     float waiting_time = 0, taround_time = 0, avg_w_t=0, avg_taround_time=0;
  for( i=0;i<n;i++)
@@ -51,7 +51,7 @@ void end_display()
 
 int main()
 {
-    int i,t=0,b_t=0,peak;
+    int i,t=0,b_total=0,peak;
     int a[10];
     float waiting_time = 0, taround_time = 0, avg_w_t=0, avg_taround_time=0;
     printf("enter the no. of processes: ");
@@ -66,7 +66,7 @@ int main()
         printf("Enter Burst Time: ");
         scanf("%d", &process_list[i].burst_t);
         process_list[i].flag = 0;
-        b_t = b_t + process_list[i].burst_t;//totaling of burst time
+        b_total = b_total + process_list[i].burst_t;//totaling of burst time
     }
     
     Sorting();
@@ -77,7 +77,7 @@ int main()
     }
     process_list[9].burst_t = 9999;
     
-    for(t = process_list[0].arrival_t; t <= b_t+1;)
+    for(t = process_list[0].arrival_t; t <= b_total+1;)
     {
         peak = 9;
         for(i=0;i<n;i++)
@@ -98,9 +98,5 @@ int main()
         
     }
     end_display();
-    /*\t%d\t%d\t%d\n",process_list[i].process_no,process_list[i].arrival_t,process_list[i].ct,process_list[i].taround_time,process_list[i].waiting_t);
-    }
     
-    printf("Average Turn around Time: %f\t\n\n",avg_taround_time);
-    printf("Average Waiting Time :\t %f\t\n",avg_w_t);*/
 }
