@@ -25,9 +25,10 @@ void Sorting()
        }
    }
 }
+
 void end_display()
 {
-	 int i,t=0,b_total=0,peak;
+	int i,t=0,b_total=0,peak;
     int a[10];
     float waiting_time = 0, taround_time = 0, avg_w_t=0, avg_taround_time=0;
  for( i=0;i<n;i++)
@@ -93,7 +94,9 @@ int main()
                 printf("P%d completes in %d\n",process_list[i].process_no,process_list[peak].completion_time);
             }
         }
+	    
         t++; 
+	    
         (process_list[peak].burst_t)--;
         
     }
