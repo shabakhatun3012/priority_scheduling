@@ -1,5 +1,6 @@
 #include<stdio.h>
 int n;
+
 struct process
 {
     int process_no;
@@ -27,6 +28,7 @@ void Sorting()
 }
 
 void end_display()
+	
 {
 	int i,t=0,b_total=0,peak;
     int a[10];
