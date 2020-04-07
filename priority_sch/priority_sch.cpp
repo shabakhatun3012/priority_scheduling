@@ -73,7 +73,6 @@ int main()
     }
     
     Sorting();
-
     for(int i=0;i<n;i++)
     {
         a[i]=process_list[i].burst_t;
@@ -95,11 +94,10 @@ int main()
                 process_list[peak].completion_time=t;process_list[peak].burst_t=9999;
                 printf("P%d completes in %d\n",process_list[i].process_no,process_list[peak].completion_time);
             }
-        }
-	    
+        }	    
         t++; 
 	    
-        (process_list[peak].burst_t)--;
+	    (process_list[peak].burst_t)--;
         
     }
     end_display();
