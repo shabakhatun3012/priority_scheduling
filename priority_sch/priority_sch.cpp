@@ -27,30 +27,10 @@ void Sorting()
    }
 }
 
-void end_display()
+
+
 	
-{
-	int i,t=0,b_total=0,peak;
-    int a[10];
-    float waiting_time = 0, taround_time = 0, avg_w_t=0, avg_taround_time=0;
- for( i=0;i<n;i++)
-    {
-        process_list[i].taround_time=(process_list[i].completion_time)-(process_list[i].arrival_t);
-        avg_taround_time=avg_taround_time+process_list[i].taround_time;
-        process_list[i].waiting_t=((process_list[i].taround_time)-a[i]);
-        avg_w_t=avg_w_t+process_list[i].waiting_t;
-    }
-    printf("PNO\tAT\tCT\tTA\tWTt\n");
-    
-    for(i=0;i<n;i++)
-    {
-        printf("P%d\t%d\t%d\t%d\t%d\n",process_list[i].process_no,process_list[i].arrival_t,process_list[i].completion_time,process_list[i].taround_time,process_list[i].waiting_t);
-    }
-    
-    printf("Average Turn around Time: %f\t\n\n",avg_taround_time);
-    printf("Average Waiting Time :\t %f\t\n",avg_w_t);	
-	
-}
+
 
 int main()
 {
@@ -100,6 +80,21 @@ int main()
 	    (process_list[peak].burst_t)--;
         
     }
-    end_display();
+    for( i=0;i<n;i++)
+    {
+        process_list[i].taround_time=(process_list[i].completion_time)-(process_list[i].arrival_t);
+        avg_taround_time=avg_taround_time+process_list[i].taround_time;
+        process_list[i].waiting_t=((process_list[i].taround_time)-a[i]);
+        avg_w_t=avg_w_t+process_list[i].waiting_t;
+    }
+    printf("PNO\tAT\tCT\tTA\tWTt\n");
+    
+    for(i=0;i<n;i++)
+    {
+        printf("P%d\t%d\t%d\t%d\t%d\n",process_list[i].process_no,process_list[i].arrival_t,process_list[i].completion_time,process_list[i].taround_time,process_list[i].waiting_t);
+    }
+    
+    printf("Average Turn around Time: %f\t\n\n",avg_taround_time);
+    printf("Average Waiting Time :\t %f\t\n",avg_w_t);	
     
 }
